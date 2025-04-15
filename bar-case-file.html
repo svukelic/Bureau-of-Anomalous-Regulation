@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BAR Case File</title>
   <link rel="stylesheet" href="bar-style.css">
+  <style>
+    .error-message {
+      color: #ff0000;
+      background-color: #ffe6e6;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ff0000;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Bureau of Anomalous Regulation</h1>
     <div class="subtitle">Form A-17 – Anomaly Regulation Case File</div>
     <div class="case-id">CASE ID: BAR-####-[Codename]</div>
+    <div id="error-container"></div>
 
     <div class="section two-col">
       <div class="column">
@@ -68,6 +79,24 @@
   </div>
 
   <script>
+    // Function to display an error message
+    function showError(message) {
+      const errorContainer = document.getElementById('error-container');
+      errorContainer.innerHTML = '';
+      
+      const errorMessage = document.createElement('div');
+      errorMessage.className = 'error-message';
+      errorMessage.textContent = message;
+      
+      errorContainer.appendChild(errorMessage);
+    }
+    
+    // Function to clear any displayed errors
+    function clearError() {
+      const errorContainer = document.getElementById('error-container');
+      errorContainer.innerHTML = '';
+    }
+
     // Function to extract case ID from URL parameter
     function getCaseIdFromUrl() {
       // Get URL parameters
@@ -76,9 +105,8 @@
       
       // Check if the caseId parameter exists and matches the 4-digit format
       if (caseIdParam && /^\d{4}$/.test(caseIdParam)) {
-        return `bar-${caseIdParam}`;
+        return caseIdParam;
       } else {
-        // No valid case ID parameter found
         return null;
       }
     }
@@ -88,9 +116,9 @@
       try {
         let url;
         if (caseId === 'template') {
-          url = 'https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/case-template.json';
+          url = 'cases/case-template.json';
         } else {
-          url = `https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/${caseId}.json`;
+          url = `cases/bar-${caseId}.json`;
         }
         
         const response = await fetch(url);
@@ -157,6 +185,7 @@
 
     // Main function to initialize the page
     async function initPage() {
+      clearError();
       const caseId = getCaseIdFromUrl();
       
       if (caseId) {
@@ -168,16 +197,19 @@
         } else {
           // If case data couldn't be loaded, try loading the template
           console.log(`Falling back to template for case ${caseId}`);
+          showError(`Error: Case file BAR-${caseId} could not be found or loaded. Displaying template data instead.`);
+          
           const templateData = await loadCaseData('template');
           
           if (templateData) {
             document.title = `BAR Case File - New Case`;
-            document.querySelector('.case-id').textContent = `CASE ID: ${caseId} - NEW`;
+            document.querySelector('.case-id').textContent = `CASE ID: BAR-${caseId} - NEW`;
             populateForm(templateData);
           } else {
             // Display error message if both case data and template couldn't be loaded
-            document.title = `BAR Case File - ${caseId} - ERROR`;
-            document.querySelector('.case-id').textContent = `CASE ID: ${caseId} - ERROR LOADING DATA`;
+            document.title = `BAR Case File - Error`;
+            document.querySelector('.case-id').textContent = `CASE ID: ERROR`;
+            showError(`Critical Error: Both case file BAR-${caseId} and template file could not be loaded. Please contact system administrator.`);
           }
         }
       } else {
@@ -192,7 +224,8 @@
         } else {
           // Display error message if template couldn't be loaded
           document.title = 'BAR Case File - ERROR';
-          document.querySelector('.case-id').textContent = 'CASE ID: ERROR LOADING TEMPLATE';
+          document.querySelector('.case-id').textContent = 'CASE ID: ERROR';
+          showError('Critical Error: Template file could not be loaded. Please contact system administrator.');
         }
       }
     }
