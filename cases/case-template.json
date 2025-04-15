@@ -1,0 +1,18 @@
+{
+  "caseId": "[BAR-####-Codename]",
+  "controlCode": "[Control code with modifiers]",
+  "hazardTypes": "[Hazard codes separated by slashes]",
+  "protocol": "[Protocol designation]",
+  "investigator": "[Name / Badge ID]",
+  "remarks": "[Assignment notes or context]",
+  "containmentProtocol": "[Containment details here]",
+  "description": "[Description of anomaly here]",
+  "notes": "[Internal notes, quotes, and insights]",
+  "discoveryLog": "[How it was discovered, cover story, first contact]",
+  "incidentLogs": [
+    {
+      "date": "[YYYY-MM-DD]",
+      "description": "[Chronological incident entries]"
+    }
+  ]
+}
