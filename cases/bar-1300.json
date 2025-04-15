@@ -21,11 +21,11 @@
     },
     {
       "title": "Protocol DARKVISION",
-      "content": "As of ██/██/20██, the Bureau has adapted ancient ritual practices discovered in [REDACTED] monastery scrolls that temporarily grant limited BAR-1300-A perception capabilities. A specialized unit, ARU DARKVISION-1 (\"Seers\"), undergoes extensive preparation involving sensory deprivation, ingestion of specific herbal compounds, and exposure to carefully controlled auditory patterns to achieve this state.\n\nARU DARKVISION-1 operators can only maintain this perceptive state for a maximum of 3 minutes and must be blindfolded and sedated immediately afterward. Following each operation, all ARU DARKVISION-1 members undergo mandatory surgical blinding procedures. The procedure removes the eyes but preserves the optic nerve to allow for prosthetic replacements after a quarantine period of 30 days. During this period, operators remain in complete darkness under medical supervision.\n\nARU DARKVISION-1 operatives describe approximately ███ BAR-1300-B entities worldwide, with higher concentrations near population centers. All attempts to interact with BAR-1300-B entities have resulted in operator casualties despite protective measures.\n\nNote: Following Incident 1300-Theta, all ARU DARKVISION-1 members are now required to undergo memory suppression treatment following their recovery period. The use of mechanical recording devices during BAR-1300-B observation is strictly prohibited following the events at Facility 23."
+      "content": "As of ██/██/20██, the Bureau has adapted ancient ritual practices discovered in [REDACTED] monastery scrolls that temporarily grant limited BAR-1300-A perception capabilities. A specialized unit, ARU DARKVISION-1 (\"Seers\"), undergoes extensive preparation involving sensory deprivation, ingestion of specific herbal compounds, and exposure to carefully controlled auditory patterns to achieve this state.\n\nARU DARKVISION-1 operators can only maintain this perceptive state for a maximum of 3 minutes and must be blindfolded and sedated immediately afterward. Following each operation, all ARU DARKVISION-1 members undergo mandatory surgical blinding procedures. The procedure removes the eyes but preserves the optic nerve to allow for prosthetic replacements after a quarantine period of 30 days. During this period, operators remain in complete darkness under medical supervision.\n\nARU DARKVISION-1 operatives describe approximately ███ BAR-1300-B entities worldwide, with higher concentrations near population centers. All attempts to interact with BAR-1300-B entities have resulted in operator casualties despite protective measures.\n\nNote: Following Incident 1300-Theta, all ARU DARKVISION-1 members are now required to undergo memory suppression treatment following their recovery period. Following Incidents 1300-Kappa-1 and 1300-Kappa-2, the use of mechanical recording devices during BAR-1300-B observation is strictly prohibited."
     },
     {
       "title": "Executive Notice",
-      "content": "Any ARU or research personnel reporting persistent sensations of being watched following exposure to BAR-1300 research materials are to be immediately quarantined and processed according to Protocol 1300-TERMINUS. No exceptions."
+      "content": "Any ARU or research personnel reporting persistent sensations of being watched following exposure to BAR-1300 research materials are to be immediately quarantined and processed according to Black Horse Contingency - TERMINUS. No exceptions."
     }
   ],
   "discoveryLog": "The Bureau first became aware of BAR-1300 in 19██ when a statistical anomaly was identified in infant mortality cases labeled as Sudden Infant Death Syndrome. Bureau analyst Dr. ████ ██████ noted a consistent pattern of neurological abnormalities in a subset of SIDS cases that had undergone detailed autopsy. Further investigation revealed the characteristic missing neural tissue and subdermal strangulation indicators.\n\nComprehensive monitoring of global medical databases was implemented in 19██, allowing for identification of BAR-1300-A instances before BAR-1300-B manifestation. Initial containment efforts focused solely on isolation of affected infants, though this proved largely ineffective at preventing BAR-1300-B manifestation and subsequent fatalities.\n\nBreakthrough came in 19██ when ancient scrolls detailing interactions with \"unseen watchers\" were recovered from a monastic archive in ██████. These texts provided the foundation for the DARKVISION protocol, allowing for limited detection and observation of BAR-1300-B entities by specially trained personnel.",
@@ -48,7 +48,7 @@
     },
     {
       "date": "20██-04-17",
-      "title": "ARU DARKVISION-1 First Deployment",
+      "title": "Incident 1300-Theta - ARU DARKVISION-1 First Deployment",
       "description": "Initial deployment of ARU DARKVISION-1 using DARKVISION protocols. Three operators successfully achieved perceptive state and confirmed presence of seven BAR-1300-B entities at test location. One operator expired during procedure despite safeguards. Remaining operators underwent successful blinding procedure and memory suppression."
     },
     {
@@ -57,14 +57,24 @@
       "description": "Researcher Dr. ███████ reported persistent visual phenomena following extended work with BAR-1300-A brain tissue samples. Medical examination revealed spontaneous formation of BAR-1300-A-like structure in his brain. Subject was terminated per Protocol 1300-TERMINUS after confirming BAR-1300-B perception."
     },
     {
+      "date": "20██-12-03",
+      "title": "Incident 1300-Kappa-1",
+      "description": "During a standard observation operation, ARU DARKVISION-1 Operator ██████ attempted to document BAR-1300-B entity behavior using a modified infrared recording device. The device unexpectedly captured clear footage of the entity, which became aware of the recording. All five BAR-1300-B entities present converged on the observation post. Four operators expired immediately; the fifth survived but was found repeating the phrase \"they can see through the recordings\" before entering a vegetative state."
+    },
+    {
+      "date": "20██-12-05",
+      "title": "Incident 1300-Kappa-2",
+      "description": "Office of Paranormal Metrics personnel examining the salvaged recording equipment from Incident 1300-Kappa-1 reported anomalous visual artifacts in their laboratory monitors. Within 36 hours, all seven staff members involved in the analysis were found deceased with typical BAR-1300-B termination indicators. Security footage revealed the analysts staring at empty corners of the room before expiring. All recording media related to the incident was incinerated, and all future recording of BAR-1300-B entities was prohibited."
+    },
+    {
       "date": "20██-01-14",
       "title": "Incident 1300-Psi",
-      "description": "ARU DARKVISION-1 Operative ████████ volunteered for a second perceptive procedure despite protocol forbidding multiple exposures. Mid-procedure, operative began exhibiting extreme distress, stating: \"They remember us. They remember who's seen them.\" before data was expunged. Fourteen personnel involved committed suicide within 72 hours. Three survivors were found catatonic, each having attempted to remove their own eyes with improvised implements."
+      "description": "ARU DARKVISION-2 Operative ████████ volunteered for a second perceptive procedure despite protocol forbidding multiple exposures. Mid-procedure, operative began exhibiting extreme distress, stating: \"They remember us. They remember who's seen them.\" before data was expunged. Fourteen personnel involved committed suicide within 72 hours. Three survivors were found catatonic, each having attempted to remove their own eyes with improvised implements."
     },
     {
       "date": "20██-02-08",
       "title": "Protocol DARKVISION Termination",
-      "description": "Following Incident 1300-Psi, all DARKVISION operations permanently suspended. All research materials relating to perceptive procedures placed under Level 5 restriction. Remaining ARU DARKVISION-1 members placed in indefinite quarantine following multiple reports of continued perception despite blindness."
+      "description": "Following Incident 1300-Psi (see notes), all DARKVISION operations permanently suspended. All research materials relating to perceptive procedures placed under Level 5 restriction. Remaining ARU DARKVISION-1 members placed in indefinite quarantine following multiple reports of continued perception despite blindness."
     }
   ]
 }
