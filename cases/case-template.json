@@ -7,12 +7,18 @@
   "remarks": "[Assignment notes or context]",
   "containmentProtocol": "[Containment details here]",
   "description": "[Description of anomaly here]",
-  "notes": "[Internal notes, quotes, and insights]",
+  "notes": [
+    {
+      "title": "[Note Title]",
+      "content": "[Note content and details]"
+    }
+  ],
   "discoveryLog": "[How it was discovered, cover story, first contact]",
   "lastUpdated": "[YYYY-MM-DD]",
   "incidentLogs": [
     {
       "date": "[YYYY-MM-DD]",
+      "title": "[Incident Title]",
       "description": "[Chronological incident entries]"
     }
   ]

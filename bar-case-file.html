@@ -5,16 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BAR Case File</title>
   <link rel="stylesheet" href="bar-style.css">
-  <style>
-    .error-message {
-      color: #ff0000;
-      background-color: #ffe6e6;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ff0000;
-      border-radius: 5px;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -62,7 +52,9 @@
 
     <div class="section">
       <h3>Notes & Observations</h3>
-      <pre id="notes">[Internal notes, quotes, and insights]</pre>
+      <div id="notes-container">
+        <!-- Notes will be dynamically inserted here -->
+      </div>
     </div>
 
     <div class="section">
@@ -146,18 +138,48 @@
       // Set case ID in the div
       document.querySelector('.case-id').textContent = `CASE ID: ${caseIdValue}`;
       
-      // Set input field values
-      document.getElementById('control-code').value = data.controlCode.replace(/[\[\]]/g, '');
-      document.getElementById('hazard-types').value = data.hazardTypes.replace(/[\[\]]/g, '');
-      document.getElementById('protocol').value = data.protocol.replace(/[\[\]]/g, '');
-      document.getElementById('investigator').value = data.investigator.replace(/[\[\]]/g, '');
-      document.getElementById('remarks').value = data.remarks.replace(/[\[\]]/g, '');
+      // Set input field values and make them read-only
+      const inputFields = ['control-code', 'hazard-types', 'protocol', 'investigator', 'remarks'];
+      inputFields.forEach(id => {
+        const field = document.getElementById(id);
+        field.value = data[id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase())].replace(/[\[\]]/g, '');
+        field.readOnly = true;
+      });
       
-      // Set pre element contents
-      document.getElementById('containment-protocol').textContent = data.containmentProtocol.replace(/[\[\]]/g, '');
-      document.getElementById('description').textContent = data.description.replace(/[\[\]]/g, '');
-      document.getElementById('notes').textContent = data.notes.replace(/[\[\]]/g, '');
-      document.getElementById('discovery-log').textContent = data.discoveryLog.replace(/[\[\]]/g, '');
+      // Set pre element contents and make them non-editable
+      const preElements = ['containment-protocol', 'description', 'discovery-log'];
+      preElements.forEach(id => {
+        const element = document.getElementById(id);
+        element.textContent = data[id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase())].replace(/[\[\]]/g, '');
+        element.contentEditable = "false";
+      });
+      
+      // Handle notes
+      const notesContainer = document.getElementById('notes-container');
+      notesContainer.innerHTML = ''; // Clear existing content
+      
+      if (data.notes && data.notes.length > 0) {
+        data.notes.forEach(note => {
+          const noteEntry = document.createElement('div');
+          noteEntry.className = 'entry-item';
+          
+          const titleElement = document.createElement('div');
+          titleElement.className = 'entry-title';
+          titleElement.textContent = note.title.replace(/[\[\]]/g, '');
+          
+          const contentElement = document.createElement('div');
+          contentElement.className = 'entry-content';
+          contentElement.textContent = note.content.replace(/[\[\]]/g, '');
+          
+          noteEntry.appendChild(titleElement);
+          noteEntry.appendChild(contentElement);
+          notesContainer.appendChild(noteEntry);
+        });
+      } else {
+        const emptyMessage = document.createElement('div');
+        emptyMessage.textContent = '[No notes recorded]';
+        notesContainer.appendChild(emptyMessage);
+      }
       
       // Handle incident logs
       const incidentLogsContainer = document.getElementById('incident-logs');
@@ -166,18 +188,27 @@
       if (data.incidentLogs && data.incidentLogs.length > 0) {
         data.incidentLogs.forEach(incident => {
           const incidentEntry = document.createElement('div');
-          incidentEntry.className = 'incident-entry';
+          incidentEntry.className = 'entry-item';
           
-          const incidentContent = document.createElement('pre');
-          const dateText = incident.date.replace(/[\[\]]/g, '');
-          const descriptionText = incident.description.replace(/[\[\]]/g, '');
-          incidentContent.textContent = `${dateText}: ${descriptionText}`;
+          const dateElement = document.createElement('div');
+          dateElement.className = 'entry-date';
+          dateElement.textContent = incident.date.replace(/[\[\]]/g, '');
           
-          incidentEntry.appendChild(incidentContent);
+          const titleElement = document.createElement('div');
+          titleElement.className = 'entry-title';
+          titleElement.textContent = incident.title.replace(/[\[\]]/g, '');
+          
+          const descriptionElement = document.createElement('div');
+          descriptionElement.className = 'entry-content';
+          descriptionElement.textContent = incident.description.replace(/[\[\]]/g, '');
+          
+          incidentEntry.appendChild(dateElement);
+          incidentEntry.appendChild(titleElement);
+          incidentEntry.appendChild(descriptionElement);
           incidentLogsContainer.appendChild(incidentEntry);
         });
       } else {
-        const emptyMessage = document.createElement('pre');
+        const emptyMessage = document.createElement('div');
         emptyMessage.textContent = '[No incident logs recorded]';
         incidentLogsContainer.appendChild(emptyMessage);
       }

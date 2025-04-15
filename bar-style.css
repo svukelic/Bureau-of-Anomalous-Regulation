@@ -205,6 +205,40 @@ pre {
   border: 1px solid #ccc;
 }
 
+/* Notes and Incident Entry Styles */
+.entry-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #eee;
+  border-left: 4px solid #888;
+}
+
+.entry-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.entry-content {
+  white-space: pre-wrap;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  text-align: center;
+}
+
 /* Footer styles */
 .footer {
   margin-top: 4rem;
@@ -239,6 +273,15 @@ pre {
   th {
     background: none;
     border-bottom: 1px solid black;
+  }
+  
+  .entry-item {
+    background: none;
+    border-left: 1px solid black;
+  }
+  
+  .error-message {
+    display: none;
   }
 }
 
