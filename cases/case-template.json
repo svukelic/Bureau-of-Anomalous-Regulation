@@ -9,6 +9,7 @@
   "description": "[Description of anomaly here]",
   "notes": "[Internal notes, quotes, and insights]",
   "discoveryLog": "[How it was discovered, cover story, first contact]",
+  "lastUpdated": "[YYYY-MM-DD]",
   "incidentLogs": [
     {
       "date": "[YYYY-MM-DD]",

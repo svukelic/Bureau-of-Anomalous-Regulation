@@ -1,0 +1,254 @@
+/* BAR Consolidated Stylesheet */
+
+/* Base styles */
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  color: #222;
+}
+
+/* Global link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Container styling */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-id {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section-desc {
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.protocol-desc {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #e0e0e0;
+}
+
+.code {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Labels and Form Elements */
+.label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+}
+
+/* Layout Classes */
+.single-col {
+  padding: 10px;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.three-col {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Text content areas */
+pre {
+  background: #eee;
+  padding: 1rem;
+  white-space: pre-wrap;
+  border-left: 4px solid #888;
+}
+
+/* Link section styles */
+.link-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #eee;
+  border-left: 4px solid #888;
+}
+
+.link-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.link-item:hover {
+  transform: translateX(5px);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.link-item a {
+  display: block;
+  font-weight: bold;
+}
+
+.link-item p {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Case file entry styling */
+.case-file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.case-left {
+  font-weight: bold;
+  text-align: left;
+}
+
+.case-right {
+  text-align: right;
+  color: #666;
+}
+
+/* Update section styles */
+.update-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #eee;
+  border-left: 4px solid #888;
+}
+
+.update-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+/* Footer styles */
+.footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+  
+  .container {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  input.input-field, pre {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+  }
+  
+  th {
+    background: none;
+    border-bottom: 1px solid black;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .three-col, .two-col {
+    flex-direction: column;
+  }
+  
+  .column {
+    margin-bottom: 1rem;
+  }
+}

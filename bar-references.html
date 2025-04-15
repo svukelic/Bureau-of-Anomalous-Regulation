@@ -4,251 +4,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAR Classification Reference</title>
-  <style>
-    body {
-      font-family: 'Courier New', monospace;
-      background-color: #f8f8f8;
-      color: #222;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      text-align: center;
-      text-transform: uppercase;
-      margin-top: 2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      border: 1px solid #444;
-      padding: 0.5rem;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background-color: #e0e0e0;
-    }
-    .code {
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    .section-desc {
-      font-style: italic;
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-    .protocol-desc {
-      margin-bottom: 1.5rem;
-      text-align: justify;
-    }
-  </style>
+  <link rel="stylesheet" href="bar-style.css">
 </head>
 <body>
-  <h1>Bureau of Anomalous Regulation</h1>
-  <h2>Classification Reference</h2>
+  <div class="container">
+    <h1>Bureau of Anomalous Regulation</h1>
+    <h2>Classification Reference</h2>
 
-  <h2>Control Codes</h2>
-  <div class="section-desc">
-    The following operational designations indicate the current containment status of documented anomalies and establish the requisite security protocols appropriate to the entity's mobility, threat level, and jurisdictional classification.
+    <h2>Control Codes</h2>
+    <div class="section-desc">
+      The following operational designations indicate the current containment status of documented anomalies and establish the requisite security protocols appropriate to the entity's mobility, threat level, and jurisdictional classification.
+    </div>
+    <table>
+      <tr><th>Code</th><th>Label</th><th>Meaning</th></tr>
+      <tr><td class="code">PAX</td><td>Passive Control</td><td>Monitored only; poses no active risk</td></tr>
+      <tr><td class="code">OBS</td><td>Observation Only</td><td>Not containable or not necessary; under watch</td></tr>
+      <tr><td class="code">LOC</td><td>Localized Containment</td><td>Bound to a location or object</td></tr>
+      <tr><td class="code">MOB</td><td>Mobile Containment</td><td>Requires transport protocols or tracking</td></tr>
+      <tr><td class="code">ISL</td><td>Isolated Quarantine</td><td>Must be sequestered from population</td></tr>
+      <tr><td class="code">CON</td><td>Pandora Containment</td><td>Secured within designated Bureau Pandora site facility</td></tr>
+      <tr><td class="code">NAT</td><td>National Threat</td><td>Requires cross-agency coordination</td></tr>
+      <tr><td class="code">EXO</td><td>Exojurisdictional</td><td>Outside legal or physical governance</td></tr>
+    </table>
+
+    <h3>Modifiers</h3>
+    <table>
+      <tr><th>Code</th><th>Meaning</th></tr>
+      <tr><td class="code">A</td><td>Active Response Team Required</td></tr>
+      <tr><td class="code">L</td><td>Long-Term Study Protocol</td></tr>
+      <tr><td class="code">B</td><td>Blackout Information (cover story in place)</td></tr>
+      <tr><td class="code">X</td><td>Executive Clearance Required</td></tr>
+      <tr><td class="code">Z</td><td>Zero Interaction Mandate</td></tr>
+    </table>
+
+    <h2>Hazard Categories</h2>
+    <div class="section-desc">
+      The following hazard designations document the primary risk vectors associated with each anomaly. Personnel must be certified in all applicable hazard categories prior to engagement with the corresponding anomalous entity.
+    </div>
+    <table>
+      <tr><th>Code</th><th>Label</th><th>Meaning</th></tr>
+      <tr><td class="code">A</td><td>Autonomous</td><td>Entity demonstrates independent decision-making processes and/or exhibits non-standard behavioral patterns without external catalysts. Requires algorithmic prediction models to anticipate response variables.</td></tr>
+      <tr><td class="code">B</td><td>Biological</td><td>Possesses capacity to replicate, propagate, or modify organic material through direct or indirect exposure. May induce cellular restructuring or genetic recoding in standard biological systems.</td></tr>
+      <tr><td class="code">C</td><td>Cognitive</td><td>Demonstrates capability to restructure, impair, or otherwise manipulate standard neurological processes including but not limited to: memory formation, perceptual input processing, and logical sequencing.</td></tr>
+      <tr><td class="code">D</td><td>Dimensional</td><td>Exhibits properties that contravene standard Euclidean parameters. May create topological inconsistencies or generate access points to non-standard spatial domains.</td></tr>
+      <tr><td class="code">E</td><td>Electromagnetic</td><td>Generates, manipulates, or otherwise affects electromagnetic spectrum phenomena outside conventional physical parameters. May interfere with standard measurement and communication systems.</td></tr>
+      <tr><td class="code">F</td><td>Functional</td><td>Material object exhibiting consistent, replicable anomalous properties. Operational methodology may be documented but remains inconsistent with known physical principles.</td></tr>
+      <tr><td class="code">H</td><td>Hostile</td><td>Demonstrates active intention to compromise Bureau personnel or infrastructure. May employ direct physical means or indirect methods to undermine containment protocols.</td></tr>
+      <tr><td class="code">I</td><td>Imitative</td><td>Possesses capacity to assume properties, appearance, or behavioral patterns of other entities. May compromise identification and authentication protocols.</td></tr>
+      <tr><td class="code">M</td><td>Metaphysical</td><td>Operates through conceptual frameworks typically resistant to standard measurement methodologies. May require symbolic or abstracted containment procedures to maintain stability.</td></tr>
+      <tr><td class="code">P</td><td>Perceptual</td><td>Induces non-standard sensory input or processing in subjects. Effects may persist after exposure termination and remain resistant to cognitive recalibration procedures.</td></tr>
+      <tr><td class="code">T</td><td>Temporal</td><td>Demonstrates ability to manipulate conventional causality chains or linear time progression. May generate localized chronological inconsistencies or paradoxical event sequences.</td></tr>
+      <tr><td class="code">U</td><td>Undefined</td><td>Properties and operational mechanics remain incompletely documented or understood. Research protocols in active development. All engagement requires executive authorization.</td></tr>
+    </table>
+
+    <h2>Horse Protocols</h2>
+    <div class="section-desc">
+      The following protocols define operational standards for handling anomalies based on their primary hazard characteristics. Protocol assignment is determined by hazard classification and weighting.
+    </div>
+
+    <div class="protocol-desc">
+      <h3>White Horse Protocol</h3>
+      <p>White Horse Protocol addresses anomalies that primarily interact with information, perception, and consciousness. These anomalies typically manipulate how reality is perceived rather than reality itself, affecting cognitive processes, sensory input interpretation, or awareness expansion.</p>
+      <p>Key operational considerations include information compartmentalization, observer rotation, cognitive monitoring, and memetic security measures.</p>
+    </div>
+
+    <div class="protocol-desc">
+      <h3>Red Horse Protocol</h3>
+      <p>Red Horse Protocol addresses anomalies that manipulate, transform, or emit energy or matter in ways that violate standard physics but maintain some consistency. These anomalies have observable physical effects, interact with conventional matter, and can be detected through instrumentation.</p>
+      <p>Key operational considerations include physical containment architecture, energy management, emission shielding, and environmental protection measures.</p>
+    </div>
+
+    <div class="protocol-desc">
+      <h3>Black Horse Protocol</h3>
+      <p>Black Horse Protocol addresses anomalies that demonstrate agency or independent decision-making. These anomalies may actively resist or circumvent containment, adapt to containment measures, manipulate personnel or systems, or utilize deception or mimicry.</p>
+      <p>Key operational considerations include psychological containment strategies, adaptive security measures, deception countermeasures, and behavior pattern analysis.</p>
+    </div>
+
+    <div class="protocol-desc">
+      <h3>Pale Horse Protocol</h3>
+      <p>Pale Horse Protocol addresses anomalies that alter fundamental aspects of reality. These anomalies may violate basic physical laws, create inconsistent or unpredictable effects, affect the structure of space, time, or causality, or fundamentally rewrite the rules of existence.</p>
+      <p>Key operational considerations include reality anchoring technology, causality monitoring, exotic containment methods, and contingency planning for unpredictable effects.</p>
+    </div>
+
+    <h2>Hazard Weighting System</h2>
+    <div class="section-desc">
+      The following weighting system is used to determine Protocol assignment based on an anomaly's hazard profile. When multiple hazards are present, weights are summed for each Protocol, and the highest total determines the assignment.
+    </div>
+    
+    <table>
+      <tr>
+        <th>Hazard Code</th>
+        <th>Hazard Label</th>
+        <th>White Horse</th>
+        <th>Red Horse</th>
+        <th>Black Horse</th>
+        <th>Pale Horse</th>
+      </tr>
+      <tr>
+        <td class="code">A</td>
+        <td>Autonomous</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>0.9</td>
+        <td>0.4</td>
+      </tr>
+      <tr>
+        <td class="code">B</td>
+        <td>Biological</td>
+        <td>0.3</td>
+        <td>0.8</td>
+        <td>0.5</td>
+        <td>0.2</td>
+      </tr>
+      <tr>
+        <td class="code">C</td>
+        <td>Cognitive</td>
+        <td>0.9</td>
+        <td>0.2</td>
+        <td>0.4</td>
+        <td>0.7</td>
+      </tr>
+      <tr>
+        <td class="code">D</td>
+        <td>Dimensional</td>
+        <td>0.3</td>
+        <td>0.3</td>
+        <td>0.2</td>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <td class="code">E</td>
+        <td>Electromagnetic</td>
+        <td>0.3</td>
+        <td>0.9</td>
+        <td>0.2</td>
+        <td>0.4</td>
+      </tr>
+      <tr>
+        <td class="code">F</td>
+        <td>Functional</td>
+        <td>0.2</td>
+        <td>0.8</td>
+        <td>0.3</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td class="code">H</td>
+        <td>Hostile</td>
+        <td>0.3</td>
+        <td>0.4</td>
+        <td>0.9</td>
+        <td>0.2</td>
+      </tr>
+      <tr>
+        <td class="code">I</td>
+        <td>Imitative</td>
+        <td>0.4</td>
+        <td>0.2</td>
+        <td>0.8</td>
+        <td>0.3</td>
+      </tr>
+      <tr>
+        <td class="code">M</td>
+        <td>Metaphysical</td>
+        <td>0.7</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>0.8</td>
+      </tr>
+      <tr>
+        <td class="code">P</td>
+        <td>Perceptual</td>
+        <td>0.8</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td class="code">T</td>
+        <td>Temporal</td>
+        <td>0.3</td>
+        <td>0.4</td>
+        <td>0.2</td>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <td class="code">U</td>
+        <td>Undefined</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td>0.0</td>
+      </tr>
+    </table>
+
+    <h2>Complete Classification Format</h2>
+    <div class="section-desc">
+      The complete classification format consists of three components:
+    </div>
+    
+    <p style="text-align: center; font-weight: bold; font-size: 1.2em;">
+      [Control Code-Modifiers][Hazard Types]<br>
+      [Protocol]
+    </p>
+    
+    <p>This indicates the containment requirements, hazard profile, and operational protocol of the anomaly.</p>
   </div>
-  <table>
-    <tr><th>Code</th><th>Label</th><th>Meaning</th></tr>
-    <tr><td class="code">PAX</td><td>Passive Control</td><td>Monitored only; poses no active risk</td></tr>
-    <tr><td class="code">OBS</td><td>Observation Only</td><td>Not containable or not necessary; under watch</td></tr>
-    <tr><td class="code">LOC</td><td>Localized Containment</td><td>Bound to a location or object</td></tr>
-    <tr><td class="code">MOB</td><td>Mobile Containment</td><td>Requires transport protocols or tracking</td></tr>
-    <tr><td class="code">ISL</td><td>Isolated Quarantine</td><td>Must be sequestered from population</td></tr>
-    <tr><td class="code">CON</td><td>Pandora Containment</td><td>Secured within designated Bureau Pandora site facility</td></tr>
-    <tr><td class="code">NAT</td><td>National Threat</td><td>Requires cross-agency coordination</td></tr>
-	<tr><td class="code">RES</td><td>Assigned Strategic Resource</td><td>Actively employed by the Bureau</td></tr>
-    <tr><td class="code">EXO</td><td>Exojurisdictional</td><td>Outside legal or physical governance</td></tr>
-  </table>
-
-  <h3>Modifiers</h3>
-  <table>
-    <tr><th>Code</th><th>Meaning</th></tr>
-    <tr><td class="code">A</td><td>Active Response Team Required</td></tr>
-	<tr><td class="code">B</td><td>Blackout Information (cover story in place)</td></tr>
-    <tr><td class="code">L</td><td>Long-Term Study Protocol</td></tr>
-    <tr><td class="code">X</td><td>Executive Clearance Required</td></tr>
-    <tr><td class="code">Z</td><td>Zero Interaction Mandate</td></tr>
-  </table>
-
-  <h2>Hazard Categories</h2>
-  <div class="section-desc">
-    The following hazard designations document the primary risk vectors associated with each anomaly. Personnel must be certified in all applicable hazard categories prior to engagement with the corresponding anomalous entity.
-  </div>
-  <table>
-    <tr><th>Code</th><th>Label</th><th>Meaning</th></tr>
-    <tr><td class="code">A</td><td>Autonomous</td><td>Entity demonstrates independent decision-making processes and/or exhibits non-standard behavioral patterns without external catalysts. Requires algorithmic prediction models to anticipate response variables.</td></tr>
-    <tr><td class="code">B</td><td>Biological</td><td>Possesses capacity to replicate, propagate, or modify organic material through direct or indirect exposure. May induce cellular restructuring or genetic recoding in standard biological systems.</td></tr>
-    <tr><td class="code">C</td><td>Cognitive</td><td>Demonstrates capability to restructure, impair, or otherwise manipulate standard neurological processes including but not limited to: memory formation, perceptual input processing, and logical sequencing.</td></tr>
-    <tr><td class="code">D</td><td>Dimensional</td><td>Exhibits properties that contravene standard Euclidean parameters. May create topological inconsistencies or generate access points to non-standard spatial domains.</td></tr>
-    <tr><td class="code">E</td><td>Electromagnetic</td><td>Generates, manipulates, or otherwise affects electromagnetic spectrum phenomena outside conventional physical parameters. May interfere with standard measurement and communication systems.</td></tr>
-    <tr><td class="code">F</td><td>Functional</td><td>Material object exhibiting consistent, replicable anomalous properties. Operational methodology may be documented but remains inconsistent with known physical principles.</td></tr>
-    <tr><td class="code">H</td><td>Hostile</td><td>Demonstrates active intention to compromise Bureau personnel or infrastructure. May employ direct physical means or indirect methods to undermine containment protocols.</td></tr>
-    <tr><td class="code">I</td><td>Imitative</td><td>Possesses capacity to assume properties, appearance, or behavioral patterns of other entities. May compromise identification and authentication protocols.</td></tr>
-    <tr><td class="code">M</td><td>Metaphysical</td><td>Operates through conceptual frameworks typically resistant to standard measurement methodologies. May require symbolic or abstracted containment procedures to maintain stability.</td></tr>
-    <tr><td class="code">P</td><td>Perceptual</td><td>Induces non-standard sensory input or processing in subjects. Effects may persist after exposure termination and remain resistant to cognitive recalibration procedures.</td></tr>
-    <tr><td class="code">T</td><td>Temporal</td><td>Demonstrates ability to manipulate conventional causality chains or linear time progression. May generate localized chronological inconsistencies or paradoxical event sequences.</td></tr>
-    <tr><td class="code">U</td><td>Undefined</td><td>Properties and operational mechanics remain incompletely documented or understood. Research protocols in active development. All engagement requires executive authorization.</td></tr>
-  </table>
-
-  <h2>Protocol Regulations</h2>
-  <div class="section-desc">
-    The following protocols define operational standards for handling anomalies based on their primary hazard characteristics. Protocol assignment is determined by hazard classification and weighting.
-  </div>
-
-  <div class="protocol-desc">
-    <h3>White Horse Protocol</h3>
-    <p>White Horse Protocol addresses anomalies that primarily interact with information, perception, and consciousness. These anomalies typically manipulate how reality is perceived rather than reality itself, affecting cognitive processes, sensory input interpretation, or awareness expansion.</p>
-    <p>Key operational considerations include information compartmentalization, observer rotation, cognitive monitoring, and memetic security measures.</p>
-  </div>
-
-  <div class="protocol-desc">
-    <h3>Red Horse Protocol</h3>
-    <p>Red Horse Protocol addresses anomalies that manipulate, transform, or emit energy or matter in ways that violate standard physics but maintain some consistency. These anomalies have observable physical effects, interact with conventional matter, and can be detected through instrumentation.</p>
-    <p>Key operational considerations include physical containment architecture, energy management, emission shielding, and environmental protection measures.</p>
-  </div>
-
-  <div class="protocol-desc">
-    <h3>Black Horse Protocol</h3>
-    <p>Black Horse Protocol addresses anomalies that demonstrate agency or independent decision-making. These anomalies may actively resist or circumvent containment, adapt to containment measures, manipulate personnel or systems, or utilize deception or mimicry.</p>
-    <p>Key operational considerations include psychological containment strategies, adaptive security measures, deception countermeasures, and behavior pattern analysis.</p>
-  </div>
-
-  <div class="protocol-desc">
-    <h3>Pale Horse Protocol</h3>
-    <p>Pale Horse Protocol addresses anomalies that alter fundamental aspects of reality. These anomalies may violate basic physical laws, create inconsistent or unpredictable effects, affect the structure of space, time, or causality, or fundamentally rewrite the rules of existence.</p>
-    <p>Key operational considerations include reality anchoring technology, causality monitoring, exotic containment methods, and contingency planning for unpredictable effects.</p>
-  </div>
-
-  <h2>Hazard Weighting System</h2>
-  <div class="section-desc">
-    The following weighting system is used to determine Protocol assignment based on an anomaly's hazard profile. When multiple hazards are present, weights are summed for each Protocol, and the highest total determines the assignment.
-  </div>
-  
-  <table>
-    <tr>
-      <th>Hazard Code</th>
-      <th>Hazard Label</th>
-      <th>White Horse</th>
-      <th>Red Horse</th>
-      <th>Black Horse</th>
-      <th>Pale Horse</th>
-    </tr>
-    <tr>
-      <td class="code">A</td>
-      <td>Autonomous</td>
-      <td>0.2</td>
-      <td>0.3</td>
-      <td>0.9</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <td class="code">B</td>
-      <td>Biological</td>
-      <td>0.3</td>
-      <td>0.8</td>
-      <td>0.5</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <td class="code">C</td>
-      <td>Cognitive</td>
-      <td>0.9</td>
-      <td>0.2</td>
-      <td>0.4</td>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <td class="code">D</td>
-      <td>Dimensional</td>
-      <td>0.3</td>
-      <td>0.3</td>
-      <td>0.2</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <td class="code">E</td>
-      <td>Electromagnetic</td>
-      <td>0.3</td>
-      <td>0.9</td>
-      <td>0.2</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <td class="code">F</td>
-      <td>Functional</td>
-      <td>0.2</td>
-      <td>0.8</td>
-      <td>0.3</td>
-      <td>0.5</td>
-    </tr>
-    <tr>
-      <td class="code">H</td>
-      <td>Hostile</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>0.9</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <td class="code">I</td>
-      <td>Imitative</td>
-      <td>0.4</td>
-      <td>0.2</td>
-      <td>0.8</td>
-      <td>0.3</td>
-    </tr>
-    <tr>
-      <td class="code">M</td>
-      <td>Metaphysical</td>
-      <td>0.7</td>
-      <td>0.2</td>
-      <td>0.3</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <td class="code">P</td>
-      <td>Perceptual</td>
-      <td>0.8</td>
-      <td>0.2</td>
-      <td>0.3</td>
-      <td>0.5</td>
-    </tr>
-    <tr>
-      <td class="code">T</td>
-      <td>Temporal</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>0.2</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <td class="code">U</td>
-      <td>Undefined</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-  </table>
-
-  <h2>Complete Classification Format</h2>
-  <div class="section-desc">
-    The complete classification format consists of three components:
-  </div>
-  
-  <p style="text-align: center; font-weight: bold; font-size: 1.2em;">
-    [Control Code-Modifiers][Hazard Types]<br>
-    [Protocol]
-  </p>
-  
-  <p>This indicates the containment requirements, hazard profile, and operational protocol of the anomaly.</p>
 </body>
 </html>

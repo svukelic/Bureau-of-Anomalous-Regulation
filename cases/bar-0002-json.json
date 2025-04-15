@@ -1,0 +1,39 @@
+{
+  "caseId": "BAR-0002-Sockstealer",
+  "controlCode": "OBS-L",
+  "hazardTypes": "P/D/U",
+  "protocol": "Pale Horse Protocol",
+  "investigator": "Dr. Eleanor Winters / BDG-3471",
+  "remarks": "Self-normalizing anomaly. Long-term study ongoing. Public awareness requires no cover story.",
+  "containmentProtocol": "No active containment procedures are required for BAR-0002 as the phenomenon has proven resistant to intervention. Monitoring stations have been established in 27 residential locations across 12 countries to document occurrence patterns. All data is to be transmitted to Research Division quarterly for analysis. Despite extensive research spanning seven decades, no method to contain or counteract the anomaly has been discovered. Fortunately, no immediate danger to human life or societal stability has been detected.",
+  "description": "BAR-0002 refers to the unexplained disappearance of individual socks during normal household laundering processes. The phenomenon occurs globally and has been documented across all cultures that use paired footwear and mechanical washing devices.\n\nThe anomaly manifests specifically as the disappearance of one sock from a matching pair, with no pattern to brand, material, size, or color. Extensive investigation has yielded no recoverable physical evidence of the missing items. Video monitoring of washing machines during operation has revealed no visible mechanism of disappearance - the socks simply cease to exist between being placed in the machine and the conclusion of the washing cycle.\n\nStatistical analysis conducted between 1975-2024 has established that when a washing load includes an odd number of socks, or a mismatched pair, there is a 17–39% probability that one sock will irreversibly vanish during the wash cycle. The probability increases under the following conditions:\n- The cycle is set to \"delicate\" or \"quick wash.\"\n- The socks are black, grey, or navy blue.\n- The socks are of sentimental or monetary value to the owner.\n\nAdditionally, manifestations occur more frequently in households with children under the age of twelve and in residential buildings older than fifty years. Seasonal fluctuations have been noted, with peak disappearance rates occurring during winter months in the Northern Hemisphere and summer months in the Southern Hemisphere.\n\nOf note is that the phenomenon appears limited to residential settings. Commercial laundry facilities report statistically normal rates of missing items attributable to human error or mechanical causes.",
+  "notes": "The Bureau became aware of BAR-0002 in 1953 when statistical analysis of household item insurance claims revealed a pattern of sock disappearances that could not be explained by conventional means. Initial investigation focused on a single neighborhood in Lakewood, Ohio, but subsequent research confirmed the global nature of the phenomenon.\n\nThree major theories have emerged from research:\n\n1. Dimensional Theory: The missing socks exist in a currently undetectable state or dimension. The washing machine spin cycle temporarily creates micro-rifts in spacetime, through which small fabric items can be transported.\n\n2. Quantum Theory: The phenomenon represents a minor reality fluctuation tied to probability, possibly a manifestation of quantum uncertainty at the macroscopic level, with socks occasionally \"deciding\" to exist elsewhere when unobserved.\n\n3. Natural Law Theory: There exists an undiscovered natural law that governs paired items, particularly those in close association with human daily life. This theory is supported by similar phenomena noted with gloves, earrings, and other paired objects.\n\nOn 03/14/2019, Dr. Marcus Reynolds, a Bureau researcher previously assigned to a cognitive hazard case, made unusual claims regarding BAR-0002, stating: \"Something is wearing the socks.\" Dr. Reynolds was treated for possible cognitive contamination and returned to duty with no recollection of the incident. As a precautionary measure, all personnel previously exposed to cognitive hazards are now excluded from BAR-0002 research.",
+  "discoveryLog": "The universality of \"missing sock\" experiences in human culture suggests the phenomenon has existed since the widespread adoption of washing machines in the early 20th century. The Bureau classifies public awareness of BAR-0002 as \"self-normalizing\" - the experience is so common that no additional cover story is required.\n\nInitial discovery came through anomalous pattern recognition in insurance claim data by Bureau data analyst Sophia Chen, who identified statistically impossible sock disappearance rates across multiple states. Subsequent field investigation confirmed the phenomenon was not the result of human error, mechanical malfunction, or known physical processes.",
+  "lastUpdated": "2024-09-15",
+  "incidentLogs": [
+    {
+      "date": "1975-06-22",
+      "description": "Standard observation test. 100 pairs of identical white cotton socks were processed through 20 different residential washing machines under direct video surveillance. 37 individual socks disappeared. No visible mechanism of disappearance was observed. Socks simply ceased to exist between one frame of video and the next."
+    },
+    {
+      "date": "1983-11-05",
+      "description": "Tracer experiment. Socks embedded with radioactive tracers were processed through affected washing machines. Upon disappearance, no residual radiation was detected in the machine, surrounding environment, or municipal water systems. Radiation monitoring stations worldwide reported no anomalous readings."
+    },
+    {
+      "date": "1997-03-18",
+      "description": "Molecular tracking. High-resolution instrumentation was used to track RFID-tagged socks during washing cycles. Data confirmed spatial disassociation at the molecular level sometime during the washing. The location of the missing matter post-disappearance remains unknown."
+    },
+    {
+      "date": "2008-07-30",
+      "description": "Machine disassembly. Comprehensive disassembly of 75 affected machines over a 30-year period completed today. No evidence of mechanical failure, blockage, or trace fabric found. Lost socks do not accumulate in machine components, sewage systems, or Bureau-controlled disposal sites."
+    },
+    {
+      "date": "2016-02-11",
+      "description": "Dimensional barrier testing. Various dimensional stabilization fields were established around washing machines during operation. No change in disappearance rates observed, regardless of field strength or type, suggesting either an unknown dimensional mechanism or an entirely different principle at work."
+    },
+    {
+      "date": "2019-03-14",
+      "description": "Incident Report Alpha: Dr. Marcus Reynolds incident. See notes section for details. All personnel working on BAR-0002 subjected to cognitive screening. No similar incidents reported."
+    }
+  ]
+}

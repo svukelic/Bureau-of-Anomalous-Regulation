@@ -4,269 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BAR Case File</title>
-  <style>
-    body {
-      font-family: 'Courier New', monospace;
-      background-color: #f4f4f4;
-      padding: 2rem;
-      color: #222;
-    }
-    .case-file {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 2rem;
-      border: 2px solid black;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2 {
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .case-id {
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .label {
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-      display: block;
-    }
-    .three-col {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .column {
-      flex: 1;
-    }
-    .control-wrapper {
-      display: flex;
-      gap: 0.5rem;
-    }
-    .control-wrapper .main {
-      flex: 2;
-    }
-    .control-wrapper .mod {
-      flex: 1;
-    }
-    select, input.field {
-      background: #eee;
-      padding: 0.5rem;
-      margin-top: 0.2rem;
-      border: 1px solid #ccc;
-      font-family: 'Courier New', monospace;
-      width: 100%;
-    }
-    .dropdown-multiselect {
-      position: relative;
-    }
-    .dropdown-multiselect .dropdown {
-      background: #eee;
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      cursor: pointer;
-      font-family: 'Courier New', monospace;
-    }
-    .dropdown-multiselect .options {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      border: 1px solid #ccc;
-      max-height: 200px;
-      overflow-y: auto;
-      display: none;
-      z-index: 1000;
-    }
-    .dropdown-multiselect.open .options {
-      display: block;
-    }
-    .dropdown-multiselect .option {
-      padding: 0.5rem;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .dropdown-multiselect .option:hover {
-      background-color: #f0f0f0;
-    }
-    .dropdown-multiselect .option input {
-      margin-right: 0.5rem;
-    }
-    #classification-summary {
-      font-family: 'Courier New', monospace;
-      font-size: 1rem;
-      text-align: center;
-    }
-    pre {
-      background: #eee;
-      padding: 1rem;
-      white-space: pre-wrap;
-      border-left: 4px solid #888;
-    }
-    @media print {
-      body {
-        background: none;
-        padding: 0;
-      }
-      .case-file {
-        border: none;
-        box-shadow: none;
-        margin: 0;
-        padding: 1rem;
-      }
-      select, input.field, pre {
-        background: none;
-        border: none;
-        padding: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="bar-style.css">
 </head>
 <body>
-  <div class="case-file">
+  <div class="container">
     <h1>Bureau of Anomalous Regulation</h1>
     <div class="subtitle">Form A-17 – Anomaly Regulation Case File</div>
     <div class="case-id">CASE ID: BAR-####-[Codename]</div>
 
+    <div class="section two-col">
+      <div class="column">
+        <label class="label" for="control-code">Control Code-Modifiers</label>
+        <input class="input-field" id="control-code" type="text" placeholder="Control code with modifiers" />
+      </div>
+      <div class="column">
+        <label class="label" for="hazard-types">Hazard Types</label>
+        <input class="input-field" id="hazard-types" type="text" placeholder="Hazard codes separated by slashes" />
+      </div>
+    </div>
+
+    <div class="section single-col">
+      <label class="label" for="protocol">Protocol</label>
+      <input class="input-field" id="protocol" type="text" placeholder="Protocol designation" />
+    </div>
+
     <div class="section three-col">
       <div class="column">
-        <label class="label" for="behavior">Behavior Classification</label>
-        <select id="behavior">
-          <option value="">-- Select Behavior --</option>
-          <option value="White Horse">White Horse</option>
-          <option value="Red Horse">Red Horse</option>
-          <option value="Black Horse">Black Horse</option>
-          <option value="Pale Horse">Pale Horse</option>
-        </select>
-      </div>
-      <div class="column">
-        <label class="label">Control Code</label>
-        <div class="control-wrapper">
-          <select class="main" id="control-main">
-            <option value="">-- Main Code --</option>
-            <option value="PAX">Passive Control – PAX</option>
-            <option value="OBS">Observation Only – OBS</option>
-            <option value="LOC">Localized Containment – LOC</option>
-            <option value="MOB">Mobile Containment – MOB</option>
-            <option value="ISL">Isolated Quarantine – ISL</option>
-            <option value="NAT">National Threat – NAT</option>
-            <option value="EXO">Exojurisdictional – EXO</option>
-          </select>
-          <select class="mod" id="control-mod">
-            <option value="">-- Modifier --</option>
-            <option value="A">Active Response Team Required – -A</option>
-            <option value="L">Long-Term Study Protocol – -L</option>
-            <option value="V">Veiled Operation – -V</option>
-            <option value="X">Executive Clearance Required – -X</option>
-            <option value="Z">Zero Interaction Mandate – -Z</option>
-          </select>
-        </div>
-      </div>
-      <div class="column">
-        <label class="label">Hazard Categories</label>
-        <div class="dropdown-multiselect" id="hazards-dropdown">
-          <div class="dropdown" onclick="toggleDropdown()">-- Select Hazard Categories --</div>
-          <div class="options">
-            <label class="option"><input type="checkbox" value="A"> Autonomous – A</label>
-            <label class="option"><input type="checkbox" value="B"> Biological – B</label>
-            <label class="option"><input type="checkbox" value="C"> Cognitive – C</label>
-            <label class="option"><input type="checkbox" value="D"> Dimensional – D</label>
-            <label class="option"><input type="checkbox" value="E"> Electromagnetic – E</label>
-            <label class="option"><input type="checkbox" value="F"> Functional – F</label>
-            <label class="option"><input type="checkbox" value="H"> Hostile – H</label>
-            <label class="option"><input type="checkbox" value="I"> Imitative – I</label>
-            <label class="option"><input type="checkbox" value="M"> Metaphysical – M</label>
-            <label class="option"><input type="checkbox" value="P"> Perceptual – P</label>
-            <label class="option"><input type="checkbox" value="T"> Temporal – T</label>
-            <label class="option"><input type="checkbox" value="U"> Undefined – U</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3 id="classification-summary">Classification Summary: N/A</h3>
-    </div>
-
-        <div class="section three-col">
-      <div class="column">
         <label class="label" for="investigator">Lead Investigator</label>
-        <input class="field" id="investigator" type="text" placeholder="Name / Badge ID" />
+        <input class="input-field" id="investigator" type="text" placeholder="Name / Badge ID" />
       </div>
       <div class="column">
         <label class="label" for="remarks">Remarks</label>
-        <input class="field" id="remarks" type="text" placeholder="Assignment notes or context" />
+        <input class="input-field" id="remarks" type="text" placeholder="Assignment notes or context" />
       </div>
     </div>
 
     <div class="section">
       <h3>Containment Protocol</h3>
-      <pre>[Containment details here]</pre>
+      <pre id="containment-protocol">[Containment details here]</pre>
     </div>
 
     <div class="section">
       <h3>Description</h3>
-      <pre>[Description of anomaly here]</pre>
+      <pre id="description">[Description of anomaly here]</pre>
     </div>
 
     <div class="section">
       <h3>Notes & Observations</h3>
-      <pre>[Internal notes, quotes, and insights]</pre>
+      <pre id="notes">[Internal notes, quotes, and insights]</pre>
     </div>
 
     <div class="section">
       <h3>Discovery Log</h3>
-      <pre>[How it was discovered, cover story, first contact]</pre>
+      <pre id="discovery-log">[How it was discovered, cover story, first contact]</pre>
     </div>
 
     <div class="section">
       <h3>Incident Logs</h3>
-      <pre>[Chronological incident entries]</pre>
+      <div id="incident-logs">
+        <!-- Incident logs will be dynamically inserted here -->
+      </div>
     </div>
   </div>
 
   <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('hazards-dropdown');
-      dropdown.classList.toggle('open');
+    // Function to extract case ID from URL parameter
+    function getCaseIdFromUrl() {
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const caseIdParam = urlParams.get('caseId');
+      
+      // Check if the caseId parameter exists and matches the 4-digit format
+      if (caseIdParam && /^\d{4}$/.test(caseIdParam)) {
+        return `bar-${caseIdParam}`;
+      } else {
+        // No valid case ID parameter found
+        return null;
+      }
     }
 
-    const behavior = document.getElementById('behavior');
-    const mainCode = document.getElementById('control-main');
-    const modCode = document.getElementById('control-mod');
-    const summary = document.getElementById('classification-summary');
-    const dropdownLabel = document.querySelector('#hazards-dropdown .dropdown');
-    const options = document.querySelectorAll('#hazards-dropdown .option input');
-
-    function updateSummary() {
-      const b = behavior.value;
-      const m = mainCode.value;
-      const mod = modCode.value;
-      const hazards = Array.from(options).filter(o => o.checked).map(o => o.value);
-      const hazardText = hazards.join(' / ');
-      dropdownLabel.textContent = hazardText || '-- Select Hazard Categories --';
-      summary.textContent = (b || m || mod || hazards.length)
-        ? `Classification Summary: ${b}-${m}${mod}${hazardText ? '-' + hazardText : ''}`
-        : 'Classification Summary: N/A';
+    // Function to load JSON data from file
+    async function loadCaseData(caseId) {
+      try {
+        let url;
+        if (caseId === 'template') {
+          url = 'https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/case-template.json';
+        } else {
+          url = `https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/${caseId}.json`;
+        }
+        
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to load case data: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error(`Error loading ${caseId} data:`, error);
+        return null;
+      }
     }
 
-    behavior.addEventListener('change', updateSummary);
-    mainCode.addEventListener('change', updateSummary);
-    modCode.addEventListener('change', updateSummary);
-    options.forEach(option => option.addEventListener('change', updateSummary));
+    // Function to populate form fields from JSON data
+    function populateForm(data) {
+      if (!data) return;
+      
+      // Update page title with case ID
+      const caseIdValue = data.caseId.replace(/[\[\]]/g, '');
+      document.title = `BAR Case File - ${caseIdValue}`;
+      
+      // Set case ID in the div
+      document.querySelector('.case-id').textContent = `CASE ID: ${caseIdValue}`;
+      
+      // Set input field values
+      document.getElementById('control-code').value = data.controlCode.replace(/[\[\]]/g, '');
+      document.getElementById('hazard-types').value = data.hazardTypes.replace(/[\[\]]/g, '');
+      document.getElementById('protocol').value = data.protocol.replace(/[\[\]]/g, '');
+      document.getElementById('investigator').value = data.investigator.replace(/[\[\]]/g, '');
+      document.getElementById('remarks').value = data.remarks.replace(/[\[\]]/g, '');
+      
+      // Set pre element contents
+      document.getElementById('containment-protocol').textContent = data.containmentProtocol.replace(/[\[\]]/g, '');
+      document.getElementById('description').textContent = data.description.replace(/[\[\]]/g, '');
+      document.getElementById('notes').textContent = data.notes.replace(/[\[\]]/g, '');
+      document.getElementById('discovery-log').textContent = data.discoveryLog.replace(/[\[\]]/g, '');
+      
+      // Handle incident logs
+      const incidentLogsContainer = document.getElementById('incident-logs');
+      incidentLogsContainer.innerHTML = ''; // Clear existing content
+      
+      if (data.incidentLogs && data.incidentLogs.length > 0) {
+        data.incidentLogs.forEach(incident => {
+          const incidentEntry = document.createElement('div');
+          incidentEntry.className = 'incident-entry';
+          
+          const incidentContent = document.createElement('pre');
+          const dateText = incident.date.replace(/[\[\]]/g, '');
+          const descriptionText = incident.description.replace(/[\[\]]/g, '');
+          incidentContent.textContent = `${dateText}: ${descriptionText}`;
+          
+          incidentEntry.appendChild(incidentContent);
+          incidentLogsContainer.appendChild(incidentEntry);
+        });
+      } else {
+        const emptyMessage = document.createElement('pre');
+        emptyMessage.textContent = '[No incident logs recorded]';
+        incidentLogsContainer.appendChild(emptyMessage);
+      }
+    }
+
+    // Main function to initialize the page
+    async function initPage() {
+      const caseId = getCaseIdFromUrl();
+      
+      if (caseId) {
+        // Try to load the case file
+        const caseData = await loadCaseData(caseId);
+        
+        if (caseData) {
+          populateForm(caseData);
+        } else {
+          // If case data couldn't be loaded, try loading the template
+          console.log(`Falling back to template for case ${caseId}`);
+          const templateData = await loadCaseData('template');
+          
+          if (templateData) {
+            document.title = `BAR Case File - New Case`;
+            document.querySelector('.case-id').textContent = `CASE ID: ${caseId} - NEW`;
+            populateForm(templateData);
+          } else {
+            // Display error message if both case data and template couldn't be loaded
+            document.title = `BAR Case File - ${caseId} - ERROR`;
+            document.querySelector('.case-id').textContent = `CASE ID: ${caseId} - ERROR LOADING DATA`;
+          }
+        }
+      } else {
+        // If case ID couldn't be extracted, load the template
+        console.log('No case ID found, loading template');
+        const templateData = await loadCaseData('template');
+        
+        if (templateData) {
+          document.title = `BAR Case File - Template`;
+          document.querySelector('.case-id').textContent = `CASE ID: NEW CASE`;
+          populateForm(templateData);
+        } else {
+          // Display error message if template couldn't be loaded
+          document.title = 'BAR Case File - ERROR';
+          document.querySelector('.case-id').textContent = 'CASE ID: ERROR LOADING TEMPLATE';
+        }
+      }
+    }
+
+    // Run the initialization when the page is loaded
+    document.addEventListener('DOMContentLoaded', initPage);
   </script>
 </body>
 </html>
