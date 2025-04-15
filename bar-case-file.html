@@ -13,7 +13,7 @@
     <div class="case-id">CASE ID: BAR-####-[Codename]</div>
     <div id="error-container"></div>
 
-    <div class="section two-col">
+    <div class="section two-col compact">
       <div class="column">
         <label class="label" for="control-code">Control Code-Modifiers</label>
         <input class="input-field" id="control-code" type="text" placeholder="Control code with modifiers" />
@@ -24,19 +24,14 @@
       </div>
     </div>
 
-    <div class="section single-col">
-      <label class="label" for="protocol">Protocol</label>
-      <input class="input-field" id="protocol" type="text" placeholder="Protocol designation" />
-    </div>
-
-    <div class="section three-col">
+    <div class="section two-col">
+      <div class="column">
+        <label class="label" for="protocol">Protocol</label>
+        <input class="input-field" id="protocol" type="text" placeholder="Protocol designation" />
+      </div>
       <div class="column">
         <label class="label" for="investigator">Lead Investigator</label>
         <input class="input-field" id="investigator" type="text" placeholder="Name / Badge ID" />
-      </div>
-      <div class="column">
-        <label class="label" for="remarks">Remarks</label>
-        <input class="input-field" id="remarks" type="text" placeholder="Assignment notes or context" />
       </div>
     </div>
 
@@ -108,9 +103,9 @@
       try {
         let url;
         if (caseId === 'template') {
-          url = 'cases/case-template.json';
+          url = 'https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/case-template.json';
         } else {
-          url = `cases/bar-${caseId}.json`;
+          url = `https://svukelic.github.io/Bureau-of-Anomalous-Regulation/cases/bar-${caseId}.json`;
         }
         
         const response = await fetch(url);
@@ -127,30 +122,52 @@
       }
     }
 
+    // Function to process text content with basic formatting
+    function processTextContent(text) {
+      if (!text) return '';
+      
+      // Process [REDACTED] with a span for styling
+      let processed = text.replace(/\[REDACTED\]/g, '<span class="redacted">REDACTED</span>');
+      
+      // Process bold text (surrounded by **)
+      processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      
+      // Process italic text (surrounded by single *) but not bullet points
+      // First, we need to protect asterisks in bullet points
+      processed = processed.replace(/^(\s*)\*(\s)/gm, '$1•$2'); // Convert bullet points to bullet character
+      
+      // Now handle actual italics
+      processed = processed.replace(/\*([^\*]+?)\*/g, '<em>$1</em>');
+      
+      return processed;
+    }
+
     // Function to populate form fields from JSON data
     function populateForm(data) {
       if (!data) return;
       
       // Update page title with case ID
-      const caseIdValue = data.caseId.replace(/[\[\]]/g, '');
+      const caseIdValue = data.caseId;
       document.title = `BAR Case File - ${caseIdValue}`;
       
       // Set case ID in the div
       document.querySelector('.case-id').textContent = `CASE ID: ${caseIdValue}`;
       
       // Set input field values and make them read-only
-      const inputFields = ['control-code', 'hazard-types', 'protocol', 'investigator', 'remarks'];
+      const inputFields = ['control-code', 'hazard-types', 'protocol', 'investigator'];
       inputFields.forEach(id => {
         const field = document.getElementById(id);
-        field.value = data[id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase())].replace(/[\[\]]/g, '');
+        const dataKey = id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase());
+        field.value = data[dataKey] || '';
         field.readOnly = true;
       });
       
-      // Set pre element contents and make them non-editable
+      // Set pre element contents with processed text
       const preElements = ['containment-protocol', 'description', 'discovery-log'];
       preElements.forEach(id => {
         const element = document.getElementById(id);
-        element.textContent = data[id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase())].replace(/[\[\]]/g, '');
+        const dataKey = id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase());
+        element.innerHTML = processTextContent(data[dataKey] || '');
         element.contentEditable = "false";
       });
       
@@ -165,13 +182,34 @@
           
           const titleElement = document.createElement('div');
           titleElement.className = 'entry-title';
-          titleElement.textContent = note.title.replace(/[\[\]]/g, '');
+          titleElement.textContent = note.title || '';
+          
+          // Add divider
+          const divider = document.createElement('div');
+          divider.className = 'entry-divider';
           
           const contentElement = document.createElement('div');
           contentElement.className = 'entry-content';
-          contentElement.textContent = note.content.replace(/[\[\]]/g, '');
           
+          // Process the content with bullet points and formatting
+          let content = note.content || '';
+          
+          // Process bullet points (lines starting with *)
+          const lines = content.split('\n');
+          const processedLines = lines.map(line => {
+            if (line.trim().startsWith('* ')) {
+              return line.replace(/^\s*\* /, '• ');
+            }
+            return line;
+          });
+          content = processedLines.join('\n');
+          
+          // Apply text formatting and set as HTML
+          contentElement.innerHTML = processTextContent(content);
+          
+          // Add elements to entry
           noteEntry.appendChild(titleElement);
+          noteEntry.appendChild(divider);
           noteEntry.appendChild(contentElement);
           notesContainer.appendChild(noteEntry);
         });
@@ -192,18 +230,39 @@
           
           const dateElement = document.createElement('div');
           dateElement.className = 'entry-date';
-          dateElement.textContent = incident.date.replace(/[\[\]]/g, '');
+          dateElement.textContent = incident.date || '';
           
           const titleElement = document.createElement('div');
           titleElement.className = 'entry-title';
-          titleElement.textContent = incident.title.replace(/[\[\]]/g, '');
+          titleElement.textContent = incident.title || '';
+          
+          // Add divider
+          const divider = document.createElement('div');
+          divider.className = 'entry-divider';
           
           const descriptionElement = document.createElement('div');
           descriptionElement.className = 'entry-content';
-          descriptionElement.textContent = incident.description.replace(/[\[\]]/g, '');
           
+          // Process the description with bullet points and formatting
+          let description = incident.description || '';
+          
+          // Process bullet points (lines starting with *)
+          const lines = description.split('\n');
+          const processedLines = lines.map(line => {
+            if (line.trim().startsWith('* ')) {
+              return line.replace(/^\s*\* /, '• ');
+            }
+            return line;
+          });
+          description = processedLines.join('\n');
+          
+          // Apply text formatting and set as HTML
+          descriptionElement.innerHTML = processTextContent(description);
+          
+          // Add elements to entry
           incidentEntry.appendChild(dateElement);
           incidentEntry.appendChild(titleElement);
+          incidentEntry.appendChild(divider);
           incidentEntry.appendChild(descriptionElement);
           incidentLogsContainer.appendChild(incidentEntry);
         });
