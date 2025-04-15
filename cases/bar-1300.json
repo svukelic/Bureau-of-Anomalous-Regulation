@@ -52,11 +52,6 @@
       "description": "Initial deployment of ARU DARKVISION-1 using DARKVISION protocols. Three operators successfully achieved perceptive state and confirmed presence of seven BAR-1300-B entities at test location. One operator expired during procedure despite safeguards. Remaining operators underwent successful blinding procedure and memory suppression."
     },
     {
-      "date": "20██-09-22",
-      "title": "Propagation Event",
-      "description": "Researcher Dr. ███████ reported persistent visual phenomena following extended work with BAR-1300-A brain tissue samples. Medical examination revealed spontaneous formation of BAR-1300-A-like structure in his brain. Subject was terminated per Protocol 1300-TERMINUS after confirming BAR-1300-B perception."
-    },
-    {
       "date": "20██-12-03",
       "title": "Incident 1300-Kappa-1",
       "description": "During a standard observation operation, ARU DARKVISION-1 Operator ██████ attempted to document BAR-1300-B entity behavior using a modified infrared recording device. The device unexpectedly captured clear footage of the entity, which became aware of the recording. All five BAR-1300-B entities present converged on the observation post. Four operators expired immediately; the fifth survived but was found repeating the phrase \"they can see through the recordings\" before entering a vegetative state."
@@ -74,7 +69,7 @@
     {
       "date": "20██-02-08",
       "title": "Protocol DARKVISION Termination",
-      "description": "Following Incident 1300-Psi (see notes), all DARKVISION operations permanently suspended. All research materials relating to perceptive procedures placed under Level 5 restriction. Remaining ARU DARKVISION-1 members placed in indefinite quarantine following multiple reports of continued perception despite blindness."
+      "description": "Following Incident 1300-Psi (see notes), all DARKVISION operations permanently suspended. All research materials relating to perceptive procedures placed under Level 5 restriction. Remaining ARU DARKVISION members placed in indefinite quarantine following multiple reports of continued perception despite blindness."
     }
   ]
 }
