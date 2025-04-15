@@ -1,0 +1,60 @@
+{
+  "caseId": "BAR-1870-Foodtime",
+  "controlCode": "LOC",
+  "hazardTypes": "T/F",
+  "protocol": "Pale Horse Protocol",
+  "investigator": "[REDACTED]",
+  "containmentProtocol": "BAR-1870 is to be kept in Break Room C-7 at Bureau Facility 19. Personnel are permitted to use the item for food storage and preparation under the following conditions:\n\n1. A log must be maintained of all items placed in BAR-1870 and their respective durations.\n2. The device must not be left running on Setting I (\"Refresh-A-Tron\") for more than 72 consecutive hours without supervision.\n3. Items aged via Setting II (\"Speed-O-Matic Zip-Zap!\") must be inspected by on-site biohazard personnel before consumption.\n4. No living organisms are to be placed inside BAR-1870.",
+  "description": "BAR-1870 appears to be a countertop microwave oven with design elements consistent with kitchen appliances manufactured in the mid-1950s. The device features a rounded, chrome-plated exterior, analog dials, and a modified control panel featuring two unique settings not found on commercial models.\n\nSetting I, labeled \"Refresh-A-Tron,\" causes any organic matter placed within the microwave to remain in its current state of freshness for the duration of operation. Temporal analysis suggests the device creates a localized chrono-static field where degradation processes appear to be counterbalanced at a 1:1 ratio with real-time progression. When the device is stopped, normal temporal progression resumes.\n\nSetting II, labeled \"Speed-O-Matic Zip-Zap!\" causes any organic matter placed within the microwave to age rapidly, advancing approximately 5.4 months per second, which accumulates to 27 years for each minute of operation. Items subjected to this setting undergo all natural processes of aging, fermentation, decomposition, or maturation that would occur over the equivalent time period under optimal conditions.",
+  "notes": [
+    {
+      "title": "Incident 1870-A",
+      "content": "On ██/██/19██, Researcher Dawkins attempted to use both settings simultaneously by setting the timer for 3 and half minutes and manipulating the control panel. This resulted in the microwave emitting a low-frequency hum, after which all flat surfaces within a 30-meter radius (tables, desks, computer monitors, picture frames, etc.) began rotating clockwise at approximately 6 RPM along their center axes parallel to the plane of each surface, regardless of size or weight. The rotation effect persisted for exactly 3 and half minutes despite BAR-1870 being disconnected from power. Three personnel reported experiencing moments of déjà vu lasting up to 2 weeks. Researcher Dawkins was found to have developed a strange condition where his digestive system began processing food in reverse - nutrition was extracted normally, but waste matter would transform back into undigested food which he would regurgitate in a pristine, ready-to-eat state. This condition persisted for 19 days before spontaneously resolving. Dual operation is now explicitly forbidden."
+    },
+    {
+      "title": "Incident 1870-B",
+      "content": "On ██/██/20██, a power surge during routine testing caused BAR-1870 to activate without any settings selected. Junior Researcher Vasquez, who was observing the test, reported that for approximately 3.5 seconds, she could see what appeared to be \"every meal that had ever been or would ever be placed in the microwave.\" Following the incident, Vasquez was able to accurately predict which foods would be placed in BAR-1870 for the next two weeks. This precognitive ability faded gradually and was entirely absent by the 15th day post-incident."
+    },
+    {
+      "title": "Notable Test Results",
+      "content": "- Fresh milk subjected to Setting II for 1 minute transformed into perfectly aged cheese with characteristics consistent with 27-year maturation.\n- A McDonald's hamburger placed on Setting I has remained in stasis for ██ months with no signs of degradation.\n- A bottle of inexpensive wine exposed to Setting II for 4 minutes (equivalent to 108 years of aging) resulted in a vintage described by Dr. ██████ as \"transcendent\" and \"impossible to achieve through conventional means.\"\n- A partially eaten yogurt container forgotten in BAR-1870 while operating on Setting I for 17 days was discovered in the exact same state of freshness as when initially placed."
+    },
+    {
+      "title": "Recovery Details",
+      "content": "BAR-1870 was discovered in the basement of a decommissioned military housing complex approximately 70 km from a series of 1950s nuclear test sites. Documentation found with the device included a partially burned manufacturer's manual with the heading \"ATOMIK KITCHEN MARVELS FOR THE MODERN HOME\" and a handwritten note reading \"Time flows differently in the radiation zone. The boys from Washington say it's nothing to worry about.\" The previous owner, retired Army Colonel ████████, claimed the device \"came from the future that never happened\" and that it \"worked better during atmospheric testing days.\""
+    },
+    {
+      "title": "Theoretical Analysis",
+      "content": "Current theory suggests BAR-1870 may be manipulating local temporal fields rather than the organic matter itself. The technology appears to be consistent with experimental temporal physics research conducted in the 1950s, though far more advanced than any documented projects from that era. The apparent connection to nuclear testing sites suggests possible exposure to exotic particles or radiation that may have altered conventional appliance components in unpredictable ways."
+    }
+  ],
+  "discoveryLog": "BAR-1870 was discovered during a routine Bureau investigation of anomalous energy readings at a decommissioned military housing complex. Initial readings were attributed to potential radioactive contamination, but upon inspection, the source was traced to what appeared to be a vintage microwave oven in the basement facility. When field agents attempted to document the device, they noticed that their coffee, which had been placed inside the microwave for reheating, remained at the exact same temperature for over six hours. Bureau containment specialists were dispatched, and the device was transported to Facility 19 for further study.",
+  "lastUpdated": "2024-06-12",
+  "incidentLogs": [
+    {
+      "date": "19██-08-21",
+      "title": "Dual Setting Incident",
+      "description": "Researcher Dawkins triggered anomalous effect by attempting to run both settings simultaneously. See Incident 1870-A in notes section for complete details."
+    },
+    {
+      "date": "20██-03-14",
+      "title": "Power Surge Activation",
+      "description": "Unintended activation during power surge granted temporary precognitive abilities to Junior Researcher Vasquez. See Incident 1870-B in notes section for details."
+    },
+    {
+      "date": "20██-09-05",
+      "title": "Experimental Food Program",
+      "description": "Bureau culinary division initiated controlled program for aging select food items. Initial results include a 27-year aged scotch created in 60 seconds that was assessed by external experts (under cover story) as \"impossible to recreate through conventional methods.\""
+    },
+    {
+      "date": "20██-11-17",
+      "title": "Temporal Field Leak",
+      "description": "During routine maintenance, a fluctuation in BAR-1870's power supply caused all clocks within a 15-meter radius to synchronize and run at exactly the same rate, correcting previously undetected timing errors. Effect persisted for 72 hours before clocks returned to their standard variance."
+    },
+    {
+      "date": "20██-02-03",
+      "title": "Containment Upgrade",
+      "description": "Following successful applications in food preservation, BAR-1870 was reassessed from 'anomalous item' to 'functional anomaly' status. Current containment allows for controlled use under specified protocols rather than complete isolation."
+    }
+  ]
+}
