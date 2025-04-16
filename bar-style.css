@@ -279,6 +279,22 @@ pre {
   color: #666;
 }
 
+/* Authorization section styles */
+.auth-row {
+  margin-bottom: 1.5rem;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.center-text {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
 /* Print styles */
 @media print {
   body {
