@@ -127,12 +127,12 @@
       if (!text) return '';
       
       // Process standard [REDACTED] format
-      let processed = text.replace(/\[REDACTED\]/g, '<span class="redacted">REDACTED</span>');
+      let processed = text.replace(/\[REDACTED\]/g, '<span class="redacted">\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0</span>');
       
-      // Process new {redact}xxx{/redact} format
-      processed = processed.replace(/\{redact\}(.*?)\{\/redact\}/g, function(match, content) {
-        // Create a redacted span with the appropriate length
-        return '<span class="redacted">' + 'X'.repeat(content.length) + '</span>';
+      // Process the variable-length [REDACT]xxx[/REDACT] format - using black square characters
+      processed = processed.replace(/\[REDACT\](.*?)\[\/REDACT\]/g, function(match, content) {
+        // Create a redacted span with appropriate length using black square characters
+        return '<span class="redacted">' + '\u25A0'.repeat(content.length) + '</span>';
       });
       
       // Process bold text (surrounded by **)
@@ -144,6 +144,22 @@
       
       // Now handle actual italics
       processed = processed.replace(/\*([^\*]+?)\*/g, '<em>$1</em>');
+      
+      return processed;
+    }
+    
+    // Function specifically for processing text to be used in input field values
+    function processInputFieldValue(text) {
+      if (!text) return '';
+      
+      // For input fields, we need to use plain text since they can't display HTML
+      // Replace both redaction formats with black square characters (■)
+      let processed = text.replace(/\[REDACTED\]/g, '\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0\u25A0');
+      
+      // Replace [REDACT]xxx[/REDACT] format
+      processed = processed.replace(/\[REDACT\](.*?)\[\/REDACT\]/g, function(match, content) {
+        return '\u25A0'.repeat(content.length);
+      });
       
       return processed;
     }
@@ -165,7 +181,7 @@
         const field = document.getElementById(id);
         const dataKey = id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase());
         const fieldValue = data[dataKey] || '';
-        field.value = fieldValue.replace(/\{redact\}(.*?)\{\/redact\}/g, 'XXXXXXXXX');
+        field.value = processInputFieldValue(fieldValue);
         field.readOnly = true;
       });
       

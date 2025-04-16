@@ -1,42 +1,42 @@
 {
-  "caseId": "BAR-2020-{redact}xxxxxxxxx{/redact}",
-  "controlCode": "[REDACTED]-[REDACTED]",
+  "caseId": "BAR-2020-[REDACT]xxxxxxxxx[/REDACT]",
+  "controlCode": "[REDACT]xxx[/REDACT]-[REDACT]xx[/REDACT]",
   "hazardTypes": "B/P/C",
   "protocol": "Red Horse",
-  "investigator": "{redact}xxxxxxxxxxxxxxxxxx{/redact}",
-  "containmentProtocol": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} isolation {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} masks {redact}xxxxxxxxxxxxxxxxxxxxxxxxx{/redact} distancing {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} global {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} transmission {redact}xxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} quarantine {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}",
-  "description": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} respiratory {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} asymptomatic {redact}xxxxxxxxxxxxx{/redact} carriers {redact}xxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} surfaces {redact}xxxxxxxxxxxxxxxxx{/redact} droplets {redact}xxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} mutation {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}",
+  "investigator": "[REDACT]xxxxxxxxxxxxxxxxxx[/REDACT]",
+  "containmentProtocol": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] isolation [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] masks [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] distancing [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] global [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] transmission [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] quarantine [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]",
+  "description": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] respiratory [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] asymptomatic [REDACT]xxxxxxxxxxxxx[/REDACT] carriers [REDACT]xxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] surfaces [REDACT]xxxxxxxxxxxxxxxxx[/REDACT] droplets [REDACT]xxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] mutation [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]",
   "notes": [
     {
-      "title": "{redact}xxxxxxxxxx{/redact}",
-      "content": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} spread {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "title": "[REDACT]xxxxxxxxxx[/REDACT]",
+      "content": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] spread [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     },
     {
-      "title": "{redact}xxxxxxxxxx{/redact}",
-      "content": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} lockdown {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "title": "[REDACT]xxxxxxxxxx[/REDACT]",
+      "content": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] lockdown [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     },
     {
-      "title": "{redact}xxxxxxxxxx{/redact}",
-      "content": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} fatality rate {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "title": "[REDACT]xxxxxxxxxx[/REDACT]",
+      "content": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] fatality rate [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     }
   ],
-  "discoveryLog": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} Wuhan {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}\n\n{redact}xxxxxxxxxxxxxxxxxxxxxxx{/redact} natural origin {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}",
-  "lastUpdated": "{redact}xxxx-xx-xx{/redact}",
+  "discoveryLog": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] Wuhan [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]\n\n[REDACT]xxxxxxxxxxxxxxxxxxxxxxx[/REDACT] natural origin [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]",
+  "lastUpdated": "[REDACT]xxxx-xx-xx[/REDACT]",
   "incidentLogs": [
     {
-      "date": "{redact}xxxx-xx-xx{/redact}",
-      "title": "{redact}xxxxxxxxxxxxxxxxx{/redact}",
-      "description": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} pandemic {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "date": "[REDACT]xxxx-xx-xx[/REDACT]",
+      "title": "[REDACT]xxxxxxxxxxxxxxxxx[/REDACT]",
+      "description": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] pandemic [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     },
     {
-      "date": "{redact}xxxx-xx-xx{/redact}",
-      "title": "{redact}xxxxxxxxxxxxxxxxx{/redact}",
-      "description": "{redact}xxxxxxxxxxxxxxxxxxxxxxxx{/redact} vaccine {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "date": "[REDACT]xxxx-xx-xx[/REDACT]",
+      "title": "[REDACT]xxxxxxxxxxxxxxxxx[/REDACT]",
+      "description": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] vaccine [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     },
     {
-      "date": "{redact}xxxx-xx-xx{/redact}",
-      "title": "{redact}xxxxxxxxxxxxxxxxx{/redact}",
-      "description": "{redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact} variant {redact}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx{/redact}"
+      "date": "[REDACT]xxxx-xx-xx[/REDACT]",
+      "title": "[REDACT]xxxxxxxxxxxxxxxxx[/REDACT]",
+      "description": "[REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT] variant [REDACT]xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx[/REDACT]"
     }
   ]
 }
