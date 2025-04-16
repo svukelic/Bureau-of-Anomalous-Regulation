@@ -1,6 +1,6 @@
 {
   "caseId": "BAR-2020-{redact}xxxxxxxxx{/redact}",
-  "controlCode": "{redact}xxx{/redact}-{redact}xx{/redact}",
+  "controlCode": "[REDACTED]-[REDACTED]",
   "hazardTypes": "B/P/C",
   "protocol": "Red Horse",
   "investigator": "{redact}xxxxxxxxxxxxxxxxxx{/redact}",
