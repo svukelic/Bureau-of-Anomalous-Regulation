@@ -1,0 +1,59 @@
+{
+  "caseId": "BAR-1088-NOCTURNAL COMMERCE",
+  "controlCode": "NAT-B",
+  "hazardTypes": "P/C/I",
+  "protocol": "White Horse",
+  "investigator": "[REDACTED]",
+  "containmentProtocol": "BAR-1088 is to be contained through procedures in accordance with White Horse Protocol section 3.7. The Bureau is to maintain and regularly update a comprehensive list of all retail locations fitting the criteria specified in the Description section. Automated monitoring system BLACKOUT is to be configured to detect and notify of any power outages or surges occurring at listed locations after sunset.\n\nUpon notification of a potential BAR-1088 manifestation, the nearest Anomaly Response Unit (ARU) is to immediately dispatch a field team to the affected location. The ARU team is to establish a Type-2 perimeter (50-meter radius) around the facility, preventing civilian entry. Standard cover story Emergency Protocol 27-B (\"potential electrical fire hazard\") is to be employed for civilian management.\n\nA designated and trained Bureau employee (henceforth referred to as \"Subject\") is to be sent inside the facility. The Subject must have completed Training Module WH-17 and received cognitive resistance certification. The Subject is to immediately navigate to the dairy section of the facility. Upon approaching the dairy section, the Subject is to loudly announce: \"Boy, I sure am in the mood for some milk!\" or equivalent phrase conveying intent to purchase milk. Variations of this message are permitted, as are translations in any currently actively spoken language. (See Note 1088-A regarding use of dead languages.)\n\nThe Subject is to select one (1) container of milk, proceed to checkout, complete purchase, and exit the facility. Additional items may be purchased concurrently with the milk according to the Approved Shopping List (See Note 1088-B). The dispatched ARU team is to maintain their presence and perimeter until dawn, at which point standard power restoration procedures may be implemented. All milk containers acquired during containment procedures are to be transported to the nearest Bureau facility for analysis and disposal according to Hazardous Biological Material protocols.\n\nIn the event that the same location exhibits manifestation more than two (2) nights in succession, specialized ARU team designated \"MILKMEN\" is to be dispatched to maintain continuous presence at the location, implementing the above protocol nightly until such time as the phenomenon ceases to manifest. Any personnel exhibiting behavioral anomalies following exposure to the phenomenon are to be immediately registered for cognitive assessment through OPM standard procedure 12-C.",
+  "description": "BAR-1088 designates a widespread phenomenon affecting grocery stores and supermarkets meeting specific structural and inventory criteria. Susceptible retail locations must possess all of the following:\n\n1. Floor space between 400-1,200 square meters\n2. Refrigerated dairy sections exceeding 8 linear meters\n3. Minimum of 4 variants of fresh (non-UHT) milk products\n\nMilk containers affected by BAR-1088 will relocate themselves from refrigeration units to floor spaces, arranging themselves in geometric patterns that appear to follow a mathematical progression consistent with ██████████ sequence. Visual observation of these patterns for periods exceeding 4 minutes results in temporary cognitive restructuring, causing subjects to experience an overwhelming compulsion to purchase the products despite obvious safety concerns.\n\nChemical analysis of the affected products reveals no anomalous composition, with anomalous properties disappearing when:\n* Power is restored to the facility\n* The sun rises\n* Products are removed from the premises\n\nDigital surveillance equipment experiences ████████████ when exposed to the anomaly, requiring the use of analog recording systems during manifestations.\n\nBAR-1088 manifestations have been documented in ███ locations across ██ countries, with identical behavioral patterns observed regardless of geographic location. Correlation analysis indicates a significant uptick in manifestation events during the winter months in both hemispheres, suggesting a possible relationship to [REDACTED].\n\nConsumption of milk purchased during an active BAR-1088 event results only in the consumer noting an unusual taste described variously as \"metallic,\" \"chalky,\" or \"reminiscent of room temperature coffee.\" No other physiological or psychological effects have been documented from consumption.",
+  "notes": [
+    {
+      "title": "Initial Assessment - Dr. [REDACTED], OPM",
+      "content": "The cognitive restructuring component of BAR-1088 is particularly concerning as it appears to bypass standard memetic resistance training. Even personnel with Level 3 cognitive security clearance reported feeling the compulsion when viewing the patterns. Recommend implementation of observational rotation protocols with 3-minute maximum exposure windows."
+    },
+    {
+      "title": "Field Analysis - Agent [REDACTED], ACD",
+      "content": "During the 03/12/20[REDACTED] manifestation, we observed what appeared to be rudimentary organization between milk containers of different types. Whole milk containers would position themselves in the center of formations, with reduced fat varieties forming concentric rings around them. When research team members attempted to disturb the pattern, the containers would rapidly reorganize once human interaction ceased."
+    },
+    {
+      "title": "Note 1088-A - Linguistic Specialist [REDACTED], OPM",
+      "content": "Testing has confirmed that when the ritual announcement (see Containment Protocol) is performed in languages no longer actively spoken by human populations (e.g., Ancient Sumerian, Proto-Indo-European, Linear A), all milk products within the facility immediately undergo accelerated fermentation processes. Samples collected show advanced spoilage within seconds of utterance, with bioanalysis revealing bacteria counts consistent with dairy products approximately 4-6 weeks past expiration. Recommend restricting announcement languages to those with at least 1,000 current speakers."
+    },
+    {
+      "title": "Note 1088-B - Operations Director [REDACTED], ARU",
+      "content": "Approved Shopping List supplements for BAR-1088 containment procedures:\n* Standard grocery items are permitted in conjunction with mandatory milk purchase\n* Bread products and baked goods decrease the probability of follow-up manifestations at the same location by approximately 22% when purchased alongside milk\n* Fresh produce has no observed effect on the phenomenon\n* Non-dairy \"milk\" alternatives (soy, almond, oat, etc.) are STRICTLY PROHIBITED during containment procedures. Three subjects who violated this directive developed severe and irreversible lactose intolerance upon exiting the facility (Incident 1088-06). Cellular examination showed permanent alteration to digestive enzyme production mechanisms."
+    },
+    {
+      "title": "Comparative Analysis - Dr. [REDACTED], OPM",
+      "content": "Data from manifestations across 17 countries indicates consistent behavioral patterns regardless of milk type, brand, packaging material, or local agricultural practices. This strongly suggests the phenomenon is targeting the concept of \"milk\" rather than specific physical properties of the containers or contents."
+    },
+    {
+      "title": "Incident Analysis - Officer [REDACTED], DLS",
+      "content": "All personnel are reminded that photographing the patterns formed by BAR-1088 milk containers is STRICTLY PROHIBITED. Three administrative staff required cognitive recalibration after viewing documentation images."
+    }
+  ],
+  "discoveryLog": "BAR-1088 was first brought to Bureau attention on 01/19/20[REDACTED] following multiple civilian reports of \"haunted milk\" at locations in ███████, Massachusetts and ████████, Ontario within a 48-hour period. Local authorities initially classified the reports as pranks or mass hysteria, particularly as digital surveillance footage showed no anomalous activity.\n\nACD field agents were dispatched following Pattern Recognition Protocol triggers when hospitals in both regions reported patients with identical symptoms of persistent visual hallucinations, all of whom had purchased milk during power outages caused by winter storm conditions.\n\nAgent [REDACTED] established initial observation parameters and confirmed the anomalous phenomenon during a manufactured power outage on 01/23/20[REDACTED]. The Department of Aberrant Incidents (DAI) implemented standard cover story SCP-14 (\"faulty refrigeration units causing food spoilage/hallucinations\").\n\nFollowing identification of three additional manifestation sites by 02/04/20[REDACTED], Bureau analytics developed the current criteria for identifying susceptible locations. As of this file update, ███ potential manifestation sites have been identified worldwide, with ongoing monitoring of approximately ██% of these locations.",
+  "lastUpdated": "20[REDACTED]-04-16",
+  "incidentLogs": [
+    {
+      "date": "20[REDACTED]-02-04",
+      "title": "Incident 1088-01",
+      "description": "Two BAR maintenance personnel entered a manifestation site during an unscheduled power outage without following proper protocols. Both subjects purchased milk despite containment warnings. Subject A consumed approximately 8oz before intervention by on-site security. Subject B did not consume any product but handled the containers for approximately 7 minutes. Subject A reported that the milk \"tasted like television static\" and proceeded to develop an unusual condition where they could only speak in dairy product brand slogans for approximately 36 hours. Medical examination revealed no physiological abnormalities, and the condition resolved spontaneously. Subject B experienced mild compulsion effects that resolved after 48 hours of standard cognitive recalibration."
+    },
+    {
+      "date": "20[REDACTED]-02-17",
+      "title": "Incident 1088-02",
+      "description": "During scheduled observation at Site-09 (████████, Germany), milk containers formed an unprecedented spiral pattern covering approximately 40% of the store floor space. Pattern exhibited properties consistent with a perfect Fibonacci sequence, which should be mathematically impossible given the number and dimensions of containers present. Investigation ongoing."
+    },
+    {
+      "date": "20[REDACTED]-04-02",
+      "title": "Incident 1088-04",
+      "description": "During routine manifestation monitoring at Site-17 (████████, Japan), containers briefly formed a pattern resembling text in an unknown language before resuming standard geometric arrangements. Linguists from OPM were unable to identify the language, but noted structural similarities to [REDACT]artifacts recovered during Operation Deep Shelf[/REDACT]. Containment protocols upgraded to include linguistic observation specialists during all future manifestations."
+    },
+    {
+      "date": "20[REDACTED]-11-28",
+      "title": "Incident 1088-09",
+      "description": "Simultaneous manifestations occurred at 7 different locations during widespread power outages caused by solar storm activity. At each site, milk containers arranged themselves in identical patterns despite having no possible means of communication between locations. Investigation ongoing."
+    }
+  ]
+}
