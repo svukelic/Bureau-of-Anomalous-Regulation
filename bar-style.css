@@ -254,6 +254,8 @@ pre {
   color: #000;
   padding: 0 2px;
   border-radius: 2px;
+  display: inline-block;
+  user-select: none;
 }
 
 .redacted:hover {

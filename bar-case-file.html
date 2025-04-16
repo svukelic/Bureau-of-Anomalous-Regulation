@@ -122,12 +122,18 @@
       }
     }
 
-    // Function to process text content with basic formatting
+    // Function to process text content with basic formatting and redaction
     function processTextContent(text) {
       if (!text) return '';
       
-      // Process [REDACTED] with a span for styling
+      // Process standard [REDACTED] format
       let processed = text.replace(/\[REDACTED\]/g, '<span class="redacted">REDACTED</span>');
+      
+      // Process new {redact}xxx{/redact} format
+      processed = processed.replace(/\{redact\}(.*?)\{\/redact\}/g, function(match, content) {
+        // Create a redacted span with the appropriate length
+        return '<span class="redacted">' + 'X'.repeat(content.length) + '</span>';
+      });
       
       // Process bold text (surrounded by **)
       processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -147,18 +153,19 @@
       if (!data) return;
       
       // Update page title with case ID
-      const caseIdValue = data.caseId;
+      const caseIdValue = processTextContent(data.caseId);
       document.title = `BAR Case File - ${caseIdValue}`;
       
       // Set case ID in the div
-      document.querySelector('.case-id').textContent = `CASE ID: ${caseIdValue}`;
+      document.querySelector('.case-id').innerHTML = `CASE ID: ${caseIdValue}`;
       
       // Set input field values and make them read-only
       const inputFields = ['control-code', 'hazard-types', 'protocol', 'investigator'];
       inputFields.forEach(id => {
         const field = document.getElementById(id);
         const dataKey = id.replace(/-([a-z])/g, (m, p1) => p1.toUpperCase());
-        field.value = data[dataKey] || '';
+        const fieldValue = data[dataKey] || '';
+        field.value = fieldValue.replace(/\{redact\}(.*?)\{\/redact\}/g, 'XXXXXXXXX');
         field.readOnly = true;
       });
       
@@ -182,7 +189,7 @@
           
           const titleElement = document.createElement('div');
           titleElement.className = 'entry-title';
-          titleElement.textContent = note.title || '';
+          titleElement.innerHTML = processTextContent(note.title || '');
           
           // Add divider
           const divider = document.createElement('div');
@@ -230,11 +237,11 @@
           
           const dateElement = document.createElement('div');
           dateElement.className = 'entry-date';
-          dateElement.textContent = incident.date || '';
+          dateElement.innerHTML = processTextContent(incident.date || '');
           
           const titleElement = document.createElement('div');
           titleElement.className = 'entry-title';
-          titleElement.textContent = incident.title || '';
+          titleElement.innerHTML = processTextContent(incident.title || '');
           
           // Add divider
           const divider = document.createElement('div');

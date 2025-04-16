@@ -4,7 +4,6 @@
   "hazardTypes": "[Hazard codes separated by slashes]",
   "protocol": "[Protocol designation]",
   "investigator": "[Name / Badge ID]",
-  "remarks": "[Assignment notes or context]",
   "containmentProtocol": "[Containment details here]",
   "description": "[Description of anomaly here]",
   "notes": [
