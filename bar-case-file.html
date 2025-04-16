@@ -163,17 +163,31 @@
       
       return processed;
     }
+    
+    // Function to process the case title specifically - uses "REDACTED" text instead of black squares
+    function processCaseTitle(text) {
+      if (!text) return '';
+      
+      // For case ID, we use "REDACTED" text instead of black squares
+      let processed = text.replace(/\[REDACTED\]/g, 'REDACTED');
+      
+      // Replace [REDACT]xxx[/REDACT] format with "REDACTED" text
+      processed = processed.replace(/\[REDACT\](.*?)\[\/REDACT\]/g, 'REDACTED');
+      
+      return processed;
+    }
 
     // Function to populate form fields from JSON data
     function populateForm(data) {
       if (!data) return;
       
       // Update page title with case ID
-      const caseIdValue = processTextContent(data.caseId);
+      const caseIdRaw = data.caseId;
+      const caseIdValue = processCaseTitle(caseIdRaw);
       document.title = `BAR Case File - ${caseIdValue}`;
       
       // Set case ID in the div
-      document.querySelector('.case-id').innerHTML = `CASE ID: ${caseIdValue}`;
+      document.querySelector('.case-id').textContent = `CASE ID: ${caseIdValue}`;
       
       // Set input field values and make them read-only
       const inputFields = ['control-code', 'hazard-types', 'protocol', 'investigator'];
